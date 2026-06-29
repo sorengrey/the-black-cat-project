@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import HeroImage from "~/components/HeroImage";
+import { Link } from "react-router";
 
 // This sets the browser tab title and metadata
 export function meta({}: Route.MetaArgs) {
@@ -63,20 +64,22 @@ export default function Home() {
             old-fashioned superstitions. We're here to spotlight these loving
             house panthers and help you find your perfect match.
           </p>
-          <button
-            style={{
-              backgroundColor: "#FFD700",
-              color: "#121212",
-              padding: "0.8rem 2rem",
-              fontSize: "1rem",
-              fontWeight: "bold",
-              border: "none",
-              borderRadius: "4px",
-              cursor: "pointer",
-            }}
-          >
-            Find Your Kitty
-          </button>
+          <Link to="/browse" style={{ textDecoration: "none" }}>
+            <button
+              style={{
+                backgroundColor: "#FFD700",
+                color: "#121212",
+                padding: "0.8rem 2rem",
+                fontSize: "1rem",
+                fontWeight: "bold",
+                border: "none",
+                borderRadius: "4px",
+                cursor: "pointer",
+              }}
+            >
+              Find Your Kitty
+            </button>
+          </Link>
         </div>
 
         {/* Right Column: Hero Image Placeholder */}
